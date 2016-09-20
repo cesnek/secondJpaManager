@@ -15,11 +15,9 @@ import javax.persistence.PersistenceContext;
 @Service
 public class CatService {
 
-//    @Autowired
-//    private EntityManager entityManager;
-
+    //OK, in module I must specify @PersistenceContext(unitName = )
     @PersistenceContext(unitName = PlugableModuleConfiguration.PERSISTENCE_UNIT_NAME)
-    private EntityManager entityManager2;
+    private EntityManager entityManager;
 
     @Autowired
     private CatRepository repository;
